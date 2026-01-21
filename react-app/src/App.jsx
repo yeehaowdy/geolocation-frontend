@@ -9,7 +9,7 @@ function App() {
   useEffect(()=>{
     (async function(){
       try{
-        const getSiegMessageJson = await fetch('https://geolocation-backend-smoky.vercel.app/')
+        const getSiegMessageJson = await fetch('https://geolocation-backend-smoky.vercel.app/hello')
         console.log(getSiegMessage)
       const getSiegMessage = await getSiegMessageJson.json()
     } catch (error){
