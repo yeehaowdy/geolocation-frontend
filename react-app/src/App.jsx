@@ -46,9 +46,9 @@ function App() {
           </ol>
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className='card'>
+          <p>Gypsy message: {siegMessage?.message}</p>
+        </div>
     </>
   )
 }
