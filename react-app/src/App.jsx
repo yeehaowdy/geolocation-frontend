@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [siegMessage, setSiegMessage] = useState('')
+  useEffect(()=>{
+    (async function(){
+      try{
+        const getSiegMessageJson = await fetch('https://')
+        console.log(getSiegMessage)
+      const getSiegMessage = await getSiegMessageJson.json()
+    } catch (error){
+      console.warn(error)
+    }
+    })()
+  }, [])
   const handleLatLongClick = async (e) => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(async function success(position){
